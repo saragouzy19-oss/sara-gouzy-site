@@ -113,9 +113,9 @@ collections:
             collapsed: true
             fields: &content_fields
               - { name: hero_role, label: "Rôle (sous le nom)", widget: string }
-              - { name: hero_tagline, label: "Accroche (accueil)", widget: required: false }
-              - { name: home_statement, label: "Phrase d’accueil", widget: required: false }
-              - { name: bio_lead, label: "Biographie — chapeau", widget: required: false }
+              - { name: hero_tagline, label: "Accroche (accueil)", widget: text, required: false }
+              - { name: home_statement, label: "Phrase d’accueil", widget: text, required: false }
+              - { name: bio_lead, label: "Biographie — chapeau", widget: text, required: false }
               - { name: bio_figcap, label: "Biographie — légende photo", widget: string }
               - name: bio_paras
                 label: "Biographie — paragraphes"
