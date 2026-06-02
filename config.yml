@@ -1,0 +1,155 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored in the repo
+media_folder: "images"
+public_folder: "/images"
+
+# Editor interface language
+locale: "fr"
+
+# Show a friendly site name in the editor
+site_url: https://example.netlify.app
+display_url: https://example.netlify.app
+
+collections:
+  # ---------------------------------------------------------------- Settings
+  - name: settings
+    label: "Réglages du site"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: settings
+        label: "Réglages"
+        file: "content/settings.json"
+        fields:
+          - { name: email, label: "Email de contact", widget: string }
+          - { name: formspree, label: "Lien Formspree (formulaires)", widget: string, required: false }
+          - { name: videoId, label: "ID vidéo YouTube (accueil)", widget: string, required: false }
+          - { name: instagram, label: "Instagram (URL)", widget: string, required: false }
+          - { name: youtube, label: "YouTube (URL)", widget: string, required: false }
+          - { name: facebook, label: "Facebook (URL)", widget: string, required: false }
+
+  # ---------------------------------------------------------------- Concerts
+  - name: concerts
+    label: "Concerts / Agenda"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: concerts
+        label: "Concerts"
+        file: "content/concerts.json"
+        fields:
+          - name: concerts
+            label: "Concerts"
+            label_singular: "Concert"
+            widget: list
+            summary: "{{fields.program}} — {{fields.city}}"
+            fields:
+              - { name: date, label: "Date (AAAA-MM-JJ, vide si inconnue)", widget: string, required: false }
+              - { name: time, label: "Heure", widget: string, required: false }
+              - { name: program, label: "Œuvre / Programme", widget: string }
+              - { name: role, label: "Rôle · Compositeur", widget: string, required: false }
+              - { name: venue, label: "Lieu / Salle", widget: string }
+              - { name: city, label: "Ville", widget: string }
+              - { name: country, label: "Pays (code, ex. FR)", widget: string, required: false }
+              - { name: ticket, label: "Lien billetterie", widget: string, required: false }
+              - { name: past, label: "Concert passé ?", widget: boolean, default: false, required: false }
+
+  # ---------------------------------------------------------------- Videos
+  - name: videos
+    label: "Vidéos"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: videos
+        label: "Vidéos"
+        file: "content/videos.json"
+        fields:
+          - name: videos
+            label: "Vidéos"
+            label_singular: "Vidéo"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: id, label: "ID YouTube (après youtu.be/)", widget: string }
+              - { name: title, label: "Titre (aria / pièce)", widget: string }
+              - { name: sub, label: "Sous-titre (Œuvre · Compositeur)", widget: string }
+
+  # ---------------------------------------------------------------- Press
+  - name: reviews
+    label: "Presse / Citations"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: reviews
+        label: "Citations"
+        file: "content/reviews.json"
+        fields:
+          - name: reviews
+            label: "Citations"
+            label_singular: "Citation"
+            widget: list
+            summary: "{{fields.source}}"
+            fields:
+              - { name: quote, label: "Citation (verbatim)", widget: text }
+              - { name: source, label: "Source (journal)", widget: string }
+              - { name: context, label: "Contexte (rôle, lieu)", widget: string, required: false }
+
+  # ---------------------------------------------------------------- Texts (3 languages)
+  - name: texts
+    label: "Textes du site (3 langues)"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: texts
+        label: "Textes — Français / English / Deutsch"
+        file: "content/texts.json"
+        fields:
+          - name: fr
+            label: "Français"
+            widget: object
+            collapsed: true
+            fields: &content_fields
+              - { name: hero_role, label: "Rôle (sous le nom)", widget: string }
+              - { name: hero_tagline, label: "Accroche (accueil)", widget: text, required: false }
+              - { name: home_statement, label: "Phrase d’accueil", widget: text, required: false }
+              - { name: bio_lead, label: "Biographie — chapeau", widget: text, required: false }
+              - { name: bio_figcap, label: "Biographie — légende photo", widget: string }
+              - name: bio_paras
+                label: "Biographie — paragraphes"
+                label_singular: "Paragraphe"
+                widget: list
+                field: { name: text, label: "Paragraphe", widget: text }
+              - { name: coaching_lead, label: "Coaching — chapeau", widget: text }
+              - { name: coaching_intro, label: "Coaching — introduction", widget: text }
+              - name: coaching_offers
+                label: "Coaching — séances"
+                label_singular: "Séance"
+                widget: list
+                summary: "{{fields.t}}"
+                fields:
+                  - { name: n, label: "Numéro (ex. 01)", widget: string }
+                  - { name: t, label: "Titre", widget: string }
+                  - { name: d, label: "Description", widget: text }
+              - name: coaching_who
+                label: "Coaching — pour qui"
+                label_singular: "Ligne"
+                widget: list
+                field: { name: text, label: "Ligne", widget: string }
+              - { name: coaching_form_note, label: "Coaching — note sous le formulaire", widget: string }
+              - { name: contact_lead, label: "Contact — chapeau", widget: text }
+              - { name: contact_based, label: "Contact — ville", widget: string }
+              - { name: cta_title, label: "Bandeau coaching — titre", widget: string }
+              - { name: cta_text, label: "Bandeau coaching — texte", widget: text }
+          - name: en
+            label: "English"
+            widget: object
+            collapsed: true
+            fields: *content_fields
+          - name: de
+            label: "Deutsch"
+            widget: object
+            collapsed: true
+            fields: *content_fields
