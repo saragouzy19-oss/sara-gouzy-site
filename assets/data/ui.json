@@ -1,0 +1,47 @@
+{
+  "fr": {
+    "meta": { "home": "Sara Gouzy — Mezzo-soprano", "biography": "Biographie — Sara Gouzy", "concerts": "Concerts — Sara Gouzy", "videos": "Vidéos — Sara Gouzy", "coaching": "Coaching vocal — Sara Gouzy", "contact": "Contact — Sara Gouzy" },
+    "nav": { "home": "Accueil", "biography": "Biographie", "concerts": "Concerts", "videos": "Vidéos", "coaching": "Coaching", "contact": "Contact" },
+    "hero": { "watch": "Voir la vidéo", "concerts": "Concerts à venir", "vcap_title": "Se legge d’amore", "vcap_sub": "Antonia Bembo", "scroll": "Défiler" },
+    "intro": { "enter": "Entrer" },
+    "home": { "statement_link": "Lire la biographie", "concerts_label": "Agenda", "concerts_title": "En concert", "concerts_link": "Voir toutes les dates", "review_label": "La presse" },
+    "bio": { "title": "Biographie", "facts_title": "Quelques rôles" },
+    "concerts": { "title": "Concerts", "lead": "Représentations à venir et une sélection de moments récents.", "tab_upcoming": "À venir", "tab_past": "Passés", "empty_upcoming": "De nouvelles dates seront annoncées prochainement.", "empty_past": "Les archives seront ajoutées prochainement.", "tickets": "Billets" },
+    "videos": { "title": "Vidéos", "lead": "Extraits de concerts et de récitals, de l’opéra à la musique baroque." },
+    "coaching": { "title": "Coaching vocal", "offers_title": "Les séances", "who_title": "Pour qui", "form_title": "Demander une séance" },
+    "contact": { "title": "Contact", "details_title": "Coordonnées", "k_email": "Email", "k_based": "Basée à", "k_follow": "Suivre", "form_title": "Écrire un message" },
+    "form": { "name": "Nom", "name_ph": "Votre nom", "email": "Email", "email_ph": "vous@exemple.com", "subject": "Sujet", "subject_ph": "Objet de votre message", "level": "Vous êtes", "level_opts": ["Chanteur professionnel", "Étudiant en chant", "Amateur", "Autre"], "goal": "Objectif", "goal_ph": "Audition, prise de rôle, technique…", "message": "Message", "message_ph": "Votre message", "send": "Envoyer", "sending": "Envoi…", "ok": "Merci, votre message a bien été envoyé.", "err": "Une erreur est survenue. Réessayez ou écrivez par email." },
+    "cta": { "btn": "Coaching vocal" },
+    "footer": { "tagline": "Mezzo-soprano & coach vocal.", "nav_title": "Naviguer", "follow_title": "Suivre", "legal_title": "Mentions", "imprint": "Mentions légales", "privacy": "Confidentialité", "rights": "Tous droits réservés.", "credit": "Site conçu avec soin." }
+  },
+  "en": {
+    "meta": { "home": "Sara Gouzy — Mezzo-soprano", "biography": "Biography — Sara Gouzy", "concerts": "Concerts — Sara Gouzy", "videos": "Videos — Sara Gouzy", "coaching": "Vocal coaching — Sara Gouzy", "contact": "Contact — Sara Gouzy" },
+    "nav": { "home": "Home", "biography": "Biography", "concerts": "Concerts", "videos": "Videos", "coaching": "Coaching", "contact": "Contact" },
+    "hero": { "watch": "Watch the video", "concerts": "Upcoming concerts", "vcap_title": "Se legge d’amore", "vcap_sub": "Antonia Bembo", "scroll": "Scroll" },
+    "intro": { "enter": "Enter" },
+    "home": { "statement_link": "Read the biography", "concerts_label": "Agenda", "concerts_title": "In concert", "concerts_link": "See all dates", "review_label": "Press" },
+    "bio": { "title": "Biography", "facts_title": "Selected roles" },
+    "concerts": { "title": "Concerts", "lead": "Upcoming performances and a selection of recent highlights.", "tab_upcoming": "Upcoming", "tab_past": "Past", "empty_upcoming": "New dates will be announced soon.", "empty_past": "Archive coming soon.", "tickets": "Tickets" },
+    "videos": { "title": "Videos", "lead": "Concert and recital excerpts, from opera to baroque music." },
+    "coaching": { "title": "Vocal coaching", "offers_title": "The sessions", "who_title": "Who it’s for", "form_title": "Request a session" },
+    "contact": { "title": "Contact", "details_title": "Details", "k_email": "Email", "k_based": "Based in", "k_follow": "Follow", "form_title": "Send a message" },
+    "form": { "name": "Name", "name_ph": "Your name", "email": "Email", "email_ph": "you@example.com", "subject": "Subject", "subject_ph": "What is it about", "level": "You are", "level_opts": ["Professional singer", "Voice student", "Amateur", "Other"], "goal": "Goal", "goal_ph": "Audition, role, technique…", "message": "Message", "message_ph": "Your message", "send": "Send", "sending": "Sending…", "ok": "Thank you, your message has been sent.", "err": "Something went wrong. Please try again or email directly." },
+    "cta": { "btn": "Vocal coaching" },
+    "footer": { "tagline": "Mezzo-soprano & vocal coach.", "nav_title": "Navigate", "follow_title": "Follow", "legal_title": "Legal", "imprint": "Imprint", "privacy": "Privacy", "rights": "All rights reserved.", "credit": "Crafted with care." }
+  },
+  "de": {
+    "meta": { "home": "Sara Gouzy — Mezzosopran", "biography": "Biografie — Sara Gouzy", "concerts": "Konzerte — Sara Gouzy", "videos": "Videos — Sara Gouzy", "coaching": "Stimmcoaching — Sara Gouzy", "contact": "Kontakt — Sara Gouzy" },
+    "nav": { "home": "Start", "biography": "Biografie", "concerts": "Konzerte", "videos": "Videos", "coaching": "Coaching", "contact": "Kontakt" },
+    "hero": { "watch": "Video ansehen", "concerts": "Kommende Konzerte", "vcap_title": "Se legge d’amore", "vcap_sub": "Antonia Bembo", "scroll": "Scrollen" },
+    "intro": { "enter": "Eintreten" },
+    "home": { "statement_link": "Zur Biografie", "concerts_label": "Termine", "concerts_title": "Im Konzert", "concerts_link": "Alle Termine ansehen", "review_label": "Presse" },
+    "bio": { "title": "Biografie", "facts_title": "Ausgewählte Partien" },
+    "concerts": { "title": "Konzerte", "lead": "Kommende Auftritte und eine Auswahl aktueller Höhepunkte.", "tab_upcoming": "Kommende", "tab_past": "Vergangene", "empty_upcoming": "Neue Termine werden in Kürze bekannt gegeben.", "empty_past": "Das Archiv folgt in Kürze.", "tickets": "Tickets" },
+    "videos": { "title": "Videos", "lead": "Konzert- und Recital-Ausschnitte, von der Oper bis zur Barockmusik." },
+    "coaching": { "title": "Stimmcoaching", "offers_title": "Die Sitzungen", "who_title": "Für wen", "form_title": "Sitzung anfragen" },
+    "contact": { "title": "Kontakt", "details_title": "Kontaktdaten", "k_email": "E-Mail", "k_based": "Ansässig in", "k_follow": "Folgen", "form_title": "Nachricht schreiben" },
+    "form": { "name": "Name", "name_ph": "Ihr Name", "email": "E-Mail", "email_ph": "sie@beispiel.com", "subject": "Betreff", "subject_ph": "Worum geht es", "level": "Sie sind", "level_opts": ["Professionelle/r Sänger/in", "Gesangsstudierende/r", "Amateur/in", "Andere"], "goal": "Ziel", "goal_ph": "Vorsingen, Partie, Technik…", "message": "Nachricht", "message_ph": "Ihre Nachricht", "send": "Senden", "sending": "Senden…", "ok": "Vielen Dank, Ihre Nachricht wurde gesendet.", "err": "Etwas ist schiefgelaufen. Bitte erneut versuchen oder per E-Mail schreiben." },
+    "cta": { "btn": "Stimmcoaching" },
+    "footer": { "tagline": "Mezzosopran & Vocal Coach.", "nav_title": "Navigation", "follow_title": "Folgen", "legal_title": "Rechtliches", "imprint": "Impressum", "privacy": "Datenschutz", "rights": "Alle Rechte vorbehalten.", "credit": "Mit Sorgfalt gestaltet." }
+  }
+}

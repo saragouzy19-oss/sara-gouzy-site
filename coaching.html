@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-page="coaching">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocal coaching — Sara Gouzy</title>
+  <meta name="description" content="Private vocal coaching with mezzo-soprano Sara Gouzy — technique, repertoire, audition and baroque style. In person in Berlin and online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Sara Gouzy<span class="brand-sub" data-i18n="hero.role">Mezzo-soprano</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="biography.html" data-i18n="nav.biography">Biography</a></li>
+        <li><a href="concerts.html" data-i18n="nav.concerts">Concerts</a></li>
+        <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
+        <li><a href="coaching.html" aria-current="page" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang">
+          <button data-lang="de">DE</button><span class="sep">/</span><button data-lang="fr">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-panel">
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="biography.html" data-i18n="nav.biography">Biography</a>
+      <a href="concerts.html" data-i18n="nav.concerts">Concerts</a>
+      <a href="videos.html" data-i18n="nav.videos">Videos</a>
+      <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang">
+      <button data-lang="de">DE</button><span class="sep">/</span><button data-lang="fr">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="section page-top" style="padding-bottom:0">
+      <div class="container">
+        <div class="sec-head reveal" style="max-width:24ch">
+          <span class="eyebrow" data-i18n="nav.coaching">Coaching</span>
+          <h1 class="h-xl" data-i18n="coaching.title">Vocal coaching</h1>
+        </div>
+        <p class="lead reveal d1" data-i18n="coaching.lead" style="max-width:50ch"></p>
+      </div>
+    </section>
+
+    <!-- INTRO + IMAGE -->
+    <section class="section" style="padding-top:clamp(2rem,4vw,3rem)">
+      <div class="container media-split">
+        <div class="m-text reveal">
+          <p class="prose" data-i18n="coaching.intro" style="max-width:42ch"></p>
+        </div>
+        <figure class="feature-img aspect-portrait reveal d1">
+          <img src="images/coaching.jpg" alt="Sara Gouzy en récital" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div id="offers" class="offer-grid"></div>
+      </div>
+    </section>
+
+    <!-- WHO + FORM -->
+    <section class="section quote-band">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2 class="h-md" data-i18n="coaching.who_title">Who it’s for</h2>
+          <ul class="coach-bullets" id="who"></ul>
+        </div>
+
+        <div class="reveal d1">
+          <h2 class="h-md" data-i18n="coaching.form_title" style="margin-bottom:1.8rem">Request a session</h2>
+          <form class="form" data-form novalidate>
+            <input type="hidden" name="_subject" value="Coaching request — saragouzy.de" />
+            <input type="hidden" name="form" value="coaching" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="field">
+              <label for="c-name" data-i18n="form.name">Name</label>
+              <input id="c-name" name="name" type="text" required data-i18n-ph="form.name_ph" />
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-email" data-i18n="form.email">Email</label>
+                <input id="c-email" name="email" type="email" required data-i18n-ph="form.email_ph" />
+              </div>
+              <div class="field">
+                <label for="c-level" data-i18n="form.level">You are</label>
+                <select id="c-level" name="level" data-opts="level"></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-goal" data-i18n="form.goal">Goal</label>
+              <input id="c-goal" name="goal" type="text" data-i18n-ph="form.goal_ph" />
+            </div>
+            <div class="field">
+              <label for="c-msg" data-i18n="form.message">Message</label>
+              <textarea id="c-msg" name="message" required data-i18n-ph="form.message_ph"></textarea>
+            </div>
+            <div>
+              <button class="btn btn--primary" type="submit" data-i18n="form.send">Send</button>
+            </div>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note" data-i18n="coaching.form_note"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Sara Gouzy<span class="brand-sub" data-i18n="footer.tagline">Mezzo-soprano &amp; voice teacher.</span></div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigate</h4>
+          <ul>
+            <li><a href="biography.html" data-i18n="nav.biography">Biography</a></li>
+            <li><a href="concerts.html" data-i18n="nav.concerts">Concerts</a></li>
+        <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
+            <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Follow</h4>
+          <ul>
+            <li><a data-link="email" data-text="keep" href="#">Email</a></li>
+            <li><a data-link="instagram">Instagram</a></li>
+            <li><a data-link="youtube">YouTube</a></li>
+            <li><a data-link="facebook">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Sara Gouzy. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <span data-i18n="footer.credit">Crafted with care.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

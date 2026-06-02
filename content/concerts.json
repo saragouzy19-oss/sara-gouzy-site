@@ -1,0 +1,10 @@
+{
+  "concerts": [
+    { "date": "", "time": "", "program": "La Liberazione di Ruggiero", "role": "Alcina, rôle-titre · Caccini", "venue": "Theater an der Wien", "city": "Wien", "country": "AT", "ticket": "", "past": true },
+    { "date": "", "time": "", "program": "Jenůfa", "role": "Jano · Janáček", "venue": "Théâtre du Capitole", "city": "Toulouse", "country": "FR", "ticket": "", "past": true },
+    { "date": "", "time": "", "program": "Susanna", "role": "Susanna, rôle-titre · Händel", "venue": "Lautten Compagney", "city": "Berlin", "country": "DE", "ticket": "", "past": true },
+    { "date": "", "time": "", "program": "Kindertotenlieder", "role": "Mezzo-soprano · Mahler", "venue": "WDR Sinfonieorchester", "city": "Köln", "country": "DE", "ticket": "", "past": true },
+    { "date": "", "time": "", "program": "Symphonie no 9 · Requiem", "role": "Beethoven · Mozart, dir. Jordi Savall", "venue": "Philharmonie de Paris", "city": "Paris", "country": "FR", "ticket": "", "past": true },
+    { "date": "", "time": "", "program": "La Cenerentola", "role": "Tisbe · Rossini", "venue": "Théâtre des Champs-Élysées", "city": "Paris", "country": "FR", "ticket": "", "past": true }
+  ]
+}
