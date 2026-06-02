@@ -93,7 +93,13 @@ collections:
             widget: list
             summary: "{{fields.source}}"
             fields:
-              - { name: quote, label: "Citation (verbatim)", widget: text }
+              - name: quote
+                label: "Citation (3 langues)"
+                widget: object
+                fields:
+                  - { name: de, label: "Deutsch (original)", widget: text, required: false }
+                  - { name: fr, label: "Français", widget: text, required: false }
+                  - { name: en, label: "English", widget: text, required: false }
               - { name: source, label: "Source (journal)", widget: string }
               - { name: context, label: "Contexte (rôle, lieu)", widget: string, required: false }
 
