@@ -1,7 +1,11 @@
 {
   "reviews": [
     {
-      "quote": "Sara Gouzy verleiht der Alcina eine prägnante Stimmstärke und vermag diese Kraft berückend zu dosieren.",
+      "quote": {
+        "de": "Sara Gouzy verleiht der Alcina eine prägnante Stimmstärke und vermag diese Kraft berückend zu dosieren.",
+        "fr": "Sara Gouzy confère à son Alcina une puissance vocale incisive et parvient à en doser la force de manière envoûtante.",
+        "en": "Sara Gouzy lends her Alcina an incisive vocal power, and knows how to modulate that strength with bewitching control."
+      },
       "source": "Wiener Zeitung",
       "context": "Alcina, Theater an der Wien"
     }
