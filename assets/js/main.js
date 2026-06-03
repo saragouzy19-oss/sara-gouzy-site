@@ -57,8 +57,7 @@ const LANGS = ["de", "fr", "en"];
 function detectLang() {
   const saved = localStorage.getItem("sg_lang");
   if (saved && LANGS.includes(saved)) return saved;
-  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
-  return LANGS.includes(nav) ? nav : "en";
+  return "de";
 }
 let LANG = detectLang();
 
@@ -155,6 +154,16 @@ function renderDynamic() {
   renderVideos();
 }
 
+/* Pick the review quote for the current language.
+   Quotes may be a plain string (old format) or an object {de, fr, en};
+   fall back to German (original), then any available language. */
+function quoteText(r) {
+  const q = r.quote;
+  if (q && typeof q === "object") {
+    return q[LANG] || q.de || q.en || q.fr || "";
+  }
+  return q || "";
+}
 function renderReviews(container, limit) {
   if (!container) return;
   const home = container.id === "reviews-home";
@@ -163,12 +172,12 @@ function renderReviews(container, limit) {
     if (home) {
       const wrap = el("figure", "pullquote");
       wrap.appendChild(el("span", "mark", "&ldquo;"));
-      wrap.appendChild(el("blockquote", null, esc(r.quote)));
+      wrap.appendChild(el("blockquote", null, esc(quoteText(r))));
       wrap.appendChild(el("cite", null, "<b>" + esc(r.source) + "</b> &nbsp;·&nbsp; " + esc(r.context)));
       container.appendChild(wrap);
     } else {
       const rev = el("figure", "review");
-      rev.appendChild(el("p", null, esc(r.quote)));
+      rev.appendChild(el("p", null, esc(quoteText(r))));
       rev.appendChild(el("footer", null, "<b>" + esc(r.source) + "</b> &nbsp; " + esc(r.context)));
       container.appendChild(rev);
     }
