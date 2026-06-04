@@ -2,7 +2,7 @@
   "concerts": [
     { "date": "2026-04-23", "time": "", "program": "Come again, Sweet Love", "role": "Mezzo-soprano · Trio Cyrene", "venue": "Theater Lindau", "city": "Lindau", "country": "DE", "ticket": "https://www.concerti.at/termine/trio-cyrene-770979/", "past": false },
     { "date": "2026-06-21", "time": "", "program": "Echo des Glücks", "role": "Mezzo-soprano · Trio Cyrene", "venue": "Altmark Festspiele", "city": "Altmark", "country": "DE", "ticket": "https://www.altmark.de/veranstaltungen/details/altmark-festspiele-2026-echo-des-gluecks-810176987/", "past": false },
-    { "date": "2026-07-01", "time": "", "program": "Carmen", "role": "Carmen, rôle-titre · Bizet", "venue": "Salzburg Festival", "city": "Salzburg", "country": "AT", "ticket": "", "past": false },
+    { "date": "2026-07-01", "time": "", "program": "Carmen", "role": "Utopia Chor , Currentzis ", "venue": "Salzburg Festival", "city": "Salzburg", "country": "AT", "ticket": "", "past": false },
     { "date": "2026-12-01", "time": "", "program": "Elektra", "role": "Dienerinnen · Strauss", "venue": "Opernhaus Zürich", "city": "Zürich", "country": "CH", "ticket": "", "past": false },
     { "date": "", "time": "", "program": "La Liberazione di Ruggiero", "role": "Alcina, rôle-titre · Caccini", "venue": "Theater an der Wien", "city": "Wien", "country": "AT", "ticket": "", "past": true },
     { "date": "", "time": "", "program": "Jenůfa", "role": "Jano · Janáček", "venue": "Théâtre du Capitole", "city": "Toulouse", "country": "FR", "ticket": "", "past": true },
