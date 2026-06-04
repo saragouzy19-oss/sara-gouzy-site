@@ -168,7 +168,7 @@ function renderReviews(container, limit) {
   if (!container) return;
   const home = container.id === "reviews-home";
   container.innerHTML = "";
-  (window.REVIEWS || []).slice(0, limit).forEach((r) => {
+  (home ? (window.REVIEWS || []) : (window.REVIEWS || []).filter((r) => !r.home_only)).slice(0, limit).forEach((r) => {
     if (home) {
       const wrap = el("figure", "pullquote");
       wrap.appendChild(el("span", "mark", "&ldquo;"));
@@ -308,7 +308,6 @@ function initVideo() {
     '?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="Sara Gouzy" ' +
     'allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
 
-  // Map the lightbox player back onto the clicked thumbnail (FLIP technique).
   const transformToOrigin = (originEl) => {
     const first = originEl.getBoundingClientRect();
     const last = inner.getBoundingClientRect();
@@ -330,10 +329,10 @@ function initVideo() {
         if (!t) return;
         inner.style.transition = "none";
         inner.style.transformOrigin = "center center";
-        inner.style.transform = t;       // start: shrunk onto the thumbnail
+        inner.style.transform = t;
         inner.style.opacity = "0.5";
-        inner.getBoundingClientRect();    // force reflow
-        requestAnimationFrame(() => {     // animate: expand to full screen
+        inner.getBoundingClientRect();
+        requestAnimationFrame(() => {
           inner.style.transition = "transform 0.62s var(--ease), opacity 0.45s ease";
           inner.style.transform = "translate(0,0) scale(1)";
           inner.style.opacity = "1";
@@ -351,10 +350,10 @@ function initVideo() {
   const close = () => {
     if (lastOrigin && !reduceMotion() && inner.getBoundingClientRect().width) {
       const t = transformToOrigin(lastOrigin);
-      lb.classList.remove("open");           // backdrop fades (CSS)
+      lb.classList.remove("open");
       if (t) {
         inner.style.transition = "transform 0.5s var(--ease), opacity 0.4s ease";
-        inner.style.transform = t;           // shrink back onto the thumbnail
+        inner.style.transform = t;
         inner.style.opacity = "0";
       }
       setTimeout(reset, 500);
@@ -363,7 +362,6 @@ function initVideo() {
     }
   };
 
-  // Delegated so dynamically-rendered video tiles work too.
   document.addEventListener("click", (e) => {
     const t = e.target.closest && e.target.closest("[data-video]");
     if (t) open(t.getAttribute("data-video-id"), t);
@@ -415,7 +413,7 @@ function renderVideos() {
 /* ---------- 3D tilt on video tiles ---------- */
 function initTilt() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (window.matchMedia("(hover: none)").matches) return; // skip on touch devices
+  if (window.matchMedia("(hover: none)").matches) return;
   document.querySelectorAll(".video-tile").forEach((tile) => {
     if (tile.__tilt) return;
     tile.__tilt = true;
@@ -449,7 +447,7 @@ function initPageTransition() {
     const href = a.getAttribute("href");
     if (!href || !href.endsWith(".html")) return;
     if (a.target === "_blank" || href.startsWith("http")) return;
-    if (e.metaKey || e.ctrlKey || e.shiftKey) return; // allow open-in-new-tab
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
     document.body.classList.add("leaving");
     setTimeout(() => { window.location.href = href; }, 300);
@@ -515,7 +513,7 @@ function initForms() {
         if (res.ok) {
           if (status) { status.textContent = t("form.ok"); status.classList.add("ok"); }
           form.reset();
-          renderDynamic(); // restore translated select options
+          renderDynamic();
         } else throw new Error("bad response");
       } catch (err) {
         if (status) { status.textContent = t("form.err"); status.classList.add("err"); }
@@ -528,8 +526,7 @@ function initForms() {
 function initIntro() {
   const intro = document.getElementById("intro");
   if (!intro) return;
-  const force = /[?&]intro=force/.test(location.search); // visit ?intro=force to preview the entrance again
-  // Only show the entrance once per browsing session (unless forced for preview).
+  const force = /[?&]intro=force/.test(location.search);
   if (!force && sessionStorage.getItem("sg_entered")) { intro.remove(); return; }
 
   document.body.style.overflow = "hidden";
@@ -540,21 +537,21 @@ function initIntro() {
     if (done) return;
     done = true;
     if (!force) { try { sessionStorage.setItem("sg_entered", "1"); } catch (e) {} }
-    intro.classList.add("revealed");          // photo slides up (curtain rises)
+    intro.classList.add("revealed");
     document.body.style.overflow = "";
     setTimeout(() => intro.remove(), 1100);
   };
 
   if (enterBtn) {
-    enterBtn.addEventListener("mouseenter", reveal);  // hovering the symbol lifts the photo
+    enterBtn.addEventListener("mouseenter", reveal);
     enterBtn.addEventListener("click", reveal);
     enterBtn.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); reveal(); }
     });
     setTimeout(() => { try { enterBtn.focus({ preventScroll: true }); } catch (e) {} }, 60);
   }
-  intro.addEventListener("click", reveal);            // clicking the photo also enters
-  setTimeout(reveal, 9000);                           // safety: never trap the visitor
+  intro.addEventListener("click", reveal);
+  setTimeout(reveal, 9000);
 }
 
 /* ---------- Footer year ---------- */
@@ -564,10 +561,9 @@ function initYear() {
 
 /* ---------- Boot ---------- */
 document.addEventListener("DOMContentLoaded", async () => {
-  try { await loadContent(); }            // fetch all editable content first
+  try { await loadContent(); }
   catch (e) { console.error("Content failed to load", e); }
 
-  // language buttons
   document.querySelectorAll(".lang button").forEach((b) =>
     b.addEventListener("click", () => setLang(b.dataset.lang))
   );
